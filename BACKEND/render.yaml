@@ -3,6 +3,7 @@ services:
     name: smartprep-backend
     env: node
     plan: free
+    rootDir: BACKEND
     buildCommand: npm install
     startCommand: npm start
     envVars:

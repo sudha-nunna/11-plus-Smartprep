@@ -62,7 +62,12 @@ Make sure your frontend code is in a GitHub repository.
    - **Framework Preset**: Next.js
    - **Root Directory**: `FRONTEND` (already configured in vercel.json)
    - **Build Command**: `npm run build` (should auto-detect)
-   - **Output Directory**: `.next` (should auto-detect)
+   - **Output Directory**: Leave EMPTY or set to `.next` (DO NOT use "Next.js default" as text - it will be treated as a literal path)
+   
+   **Important**: In the Output Directory field, either:
+   - Leave it completely empty (recommended - Vercel will auto-detect)
+   - OR type `.next` explicitly
+   - DO NOT type "Next.js default" - this causes deployment errors
    
    **Note**: Vercel should auto-detect the root directory from vercel.json. If not, manually set it to `FRONTEND`.
 

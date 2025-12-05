@@ -25,7 +25,9 @@ Make sure your backend code is in a GitHub repository.
    - **Environment**: `Node`
    - **Build Command**: `npm install`
    - **Start Command**: `npm start`
-   - **Root Directory**: `Smart-prep/BACKEND` (if your repo has this structure)
+   - **Root Directory**: `BACKEND` (already configured in render.yaml)
+   
+   **Note**: If using render.yaml, Render will auto-detect the root directory. Otherwise, manually set it to `BACKEND`.
 
 ### 3. Environment Variables on Render
 
@@ -58,9 +60,11 @@ Make sure your frontend code is in a GitHub repository.
 3. Import your GitHub repository
 4. Configure the project:
    - **Framework Preset**: Next.js
-   - **Root Directory**: `Smart-prep/FRONTEND` (if your repo has this structure)
+   - **Root Directory**: `FRONTEND` (already configured in vercel.json)
    - **Build Command**: `npm run build` (should auto-detect)
    - **Output Directory**: `.next` (should auto-detect)
+   
+   **Note**: Vercel should auto-detect the root directory from vercel.json. If not, manually set it to `FRONTEND`.
 
 ### 3. Environment Variables on Vercel
 

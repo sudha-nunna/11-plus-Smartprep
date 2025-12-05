@@ -10,6 +10,7 @@ import {
   Facebook, Twitter, Mail, MessageCircle, Calendar, User,
 } from "lucide-react"
 import Link from "next/link"
+import { getApiUrl } from "@/lib/api-config"
 
 // Map DB icon names to React components
 const iconMap: Record<string, any> = {
@@ -70,7 +71,7 @@ export default function PracticePage() {
 
   // Fetch metrics
   useEffect(() => {
-    fetch("http://localhost:5000/api/metrics")
+    fetch(getApiUrl("/api/metrics"))
       .then(res => res.json())
       .then(setMetrics)
       .catch(err => console.error("Error fetching metrics:", err))
@@ -78,7 +79,7 @@ export default function PracticePage() {
 
   // Fetch tests
   useEffect(() => {
-    fetch("http://localhost:5000/api/tests")
+    fetch(getApiUrl("/api/tests"))
       .then(res => res.json())
       .then(setTests)
       .catch(err => console.error("Error fetching tests:", err))
@@ -86,7 +87,7 @@ export default function PracticePage() {
 
   // Fetch subjects
   useEffect(() => {
-    fetch("http://localhost:5000/api/subjects")
+    fetch(getApiUrl("/api/subjects"))
       .then(res => res.json())
       .then(setSubjects)
       .catch(err => console.error("Error fetching subjects:", err))
@@ -94,7 +95,7 @@ export default function PracticePage() {
 
   // Fetch recent activity
   useEffect(() => {
-    fetch("http://localhost:5000/api/activities")
+    fetch(getApiUrl("/api/activities"))
       .then(res => res.json())
       .then(setRecentActivity)
       .catch(err => console.error("Error fetching activities:", err))

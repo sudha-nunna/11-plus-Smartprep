@@ -11,7 +11,6 @@ interface UserProfile {
   firstName: string;
   // Add other user properties as needed
 }
-
 export default function Navbar() {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [isOpen, setIsOpen] = useState(false);

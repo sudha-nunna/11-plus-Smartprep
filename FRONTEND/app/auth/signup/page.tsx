@@ -99,9 +99,9 @@ export default function SignupPage() {
     setIsLoading(true);
 
     try {
-     
-axios.defaults.baseURL = "http://localhost:5000"; // backend
-axios.defaults.withCredentials = true; // if using cookies/auth
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+      axios.defaults.baseURL = apiUrl; // backend
+      axios.defaults.withCredentials = true; // if using cookies/auth
 
       const res = await axios.post(
         "/api/auth/register",{
